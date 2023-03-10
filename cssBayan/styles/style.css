@@ -4,3 +4,51 @@ body {
     line-height: 1.5;
     background-color: #C0C0C0;
 } 
+
+/* mem */
+
+.mem {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.mem-title {
+    display: block;
+    cursor: pointer;
+    padding: 10px 0px;
+}
+
+.mem:hover .mem-title{
+    color: blue;
+}
+
+.mem-input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    
+}
+
+.mem-input:checked + .mem-img {
+    display: block;
+}
+
+.mem-img {
+    display: none;
+}
+
+.mem-line {
+    height: 2px;
+    background-color: black;
+}
+
+.mem-img img{
+    display: block;
+    margin: 0 auto;
+    padding: 0px 0px 10px 0px ;
+    width: 50%;
+    height: 50%;    
+}
+
