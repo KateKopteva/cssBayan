@@ -36,11 +36,18 @@ body {
     position: relative;
 }
 
-.mem-img {
-    display: none; 
+.mem-img img{
+    width: 0;
+    height: 0;
+    transition: 0.4s; 
+    display: block;
+    margin: 0 auto;
 }
 
-.mem-img img {
+.mem-input:checked ~ .mem-img img,
+.mem-input:hover ~ .mem-img img,
+.mem-item:hover .mem-img img
+{
     padding: 0px 0px 10px 0px ;
     width: 50%;
     height: 50%; 
@@ -48,16 +55,14 @@ body {
     margin: 0 auto;
 }
 
-.mem-input:checked ~ .mem-img{
-    display: block;
-}
-
-.mem-input:hover ~ .mem-img {
-    display: block;
+.mem-input:active ~ .mem-title,
+.mem-input:active ~ .mem-img img {  
+    opacity: 0.6;
 }
 
 .mem-input:checked ~ .mem-title,
-.mem:hover .mem-title {
+.mem:hover .mem-title,
+.mem:hover .mem-img {
     color: white;
 }
 
@@ -73,7 +78,8 @@ body {
     transform: translateY(-50%);
 }
 
-.mem-input:checked ~ .mem-title:after {
+.mem-input:checked ~ .mem-title:after,
+.mem-input:hover ~ .mem-title:after {
     border-style: solid;
     border-width: 0 5px 10px 5px;
     border-color: transparent transparent black 
