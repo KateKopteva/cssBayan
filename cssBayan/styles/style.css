@@ -34,6 +34,7 @@ body {
     padding: 10px 0px;
     color: black;
     position: relative;
+    font-weight: bold;
 }
 
 .mem-img img{
@@ -57,7 +58,7 @@ body {
 
 .mem-input:active ~ .mem-title,
 .mem-input:active ~ .mem-img img {  
-    opacity: 0.6;
+    opacity: 0.4;
 }
 
 .mem-input:checked ~ .mem-title,
@@ -84,6 +85,12 @@ body {
     border-width: 0 5px 10px 5px;
     border-color: transparent transparent black 
 }
-    
+
+@media(max-width: 430px) {
+    .mem {
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+}
 
 
