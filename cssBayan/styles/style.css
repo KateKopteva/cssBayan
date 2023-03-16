@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #C0C0C0;
+    color: white;
+} 
+
+/* mem */
+
+.mem {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.mem-line {
+    height: 2px;
+    background-color: black;
+}
+
+.mem-item {
+    position: relative;
+}
+
+.mem-input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    appearance: none;
+}
+
+.mem-title {
+    display: block;
+    padding: 10px 0px;
+    color: black;
+    position: relative;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.mem-img img{
+    width: 0;
+    height: 0;
+    transition: 0.4s; 
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.mem-input:checked ~ .mem-img img,
+.mem-input:hover ~ .mem-img img,
+.mem-item:hover .mem-img img
+{
+    padding: 0px 0px 10px 0px ;
+    width: 50%;
+    height: 50%; 
+    display: block;
+    margin: 0 auto;
+}
+
+.mem-input:active ~ .mem-title,
+.mem-input:active ~ .mem-img img {  
+    opacity: 0.4;
+}
+
+.mem-input:checked ~ .mem-title,
+.mem:hover .mem-title,
+.mem:hover .mem-img {
+    color: white;
+}
+
+.mem:hover .mem-title:after {
+    content: '';
+    display: block;
+    border-style: solid;
+    border-width: 10px 5px 0 5px;
+    border-color: black transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+.mem-input:checked ~ .mem-title:after,
+.mem-input:hover ~ .mem-title:after {
+    border-style: solid;
+    border-width: 0 5px 10px 5px;
+    border-color: transparent transparent black 
+}
+
+@media(max-width: 430px) {
+    .mem {
+        max-width: 90vw;
+        margin: 0 auto;
+    }
+}
+
+
