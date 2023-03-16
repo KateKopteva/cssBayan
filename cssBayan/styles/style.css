@@ -35,6 +35,7 @@ body {
     color: black;
     position: relative;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .mem-img img{
